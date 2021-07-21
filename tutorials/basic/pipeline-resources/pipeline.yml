@@ -11,6 +11,7 @@ jobs:
     public: true
     plan:
       - get: resource-tutorial
+        privileged: true
       - task: hello-world
         privileged: true
         file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
