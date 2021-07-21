@@ -3,8 +3,8 @@ resources:
   - name: resource-tutorial
     type: git
     source:
-      uri: https://github.com/starkandwayne/concourse-tutorial.git
-      branch: develop
+      uri: https://github.com/paulbarfuss/concourse-tutorial.git
+      branch: crc-tutorial-run
 
 jobs:
   - name: job-hello-world
@@ -12,4 +12,5 @@ jobs:
     plan:
       - get: resource-tutorial
       - task: hello-world
+        privileged: true
         file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
