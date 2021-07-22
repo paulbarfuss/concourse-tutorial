@@ -8,7 +8,7 @@ resources:
 
 jobs:
   - name: job-hello-world
-    public: true
+    public: false
     plan:
       - get: resource-tutorial
       - task: hello-world
