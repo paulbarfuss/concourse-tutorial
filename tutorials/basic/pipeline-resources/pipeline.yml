@@ -3,13 +3,12 @@ resources:
   - name: resource-tutorial
     type: git
     source:
-      uri: "https://github.com/paulbarfuss/concourse-tutorial.git"
-      branch: "crc-tutorial-run"
+      uri: git@github.com:paulbarfuss/concourse-tutorial.git
+      branch: crc-tutorial-run
 
 jobs:
   - name: job-hello-world
     public: true
-    privileged: true
     plan:
       - get: resource-tutorial
       - task: hello-world
